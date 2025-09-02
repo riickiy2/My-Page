@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULA FORMAS</title>
+    <link rel="stylesheet" href="mathstyle.css">
+</head>
+<body>
+    <button onclick="window.location.href='../index.html'">⬅ Voltar</button>
+	<h1>CÁLCULO DE FORMAS GEOMÉTRICAS</h1>
+	<h3>Perímetro e Área</h3>
+	<div class="caixa">
+		
+		<label for="nome">Selecione a forma:</label><br>
+		<select id="forma">
+			<option value="">Selecione:</option>
+			<option value="circulo">Círculo</option>
+			<option value="losango">Losango</option>
+			<option value="quadrado">Quadrado</option>
+			<option value="retangulo">Retângulo</option>
+			<option value="triangulo">Triângulo</option>
+		</select><br>
+		
+		<hr>
+
+		
+		<div id="inputs"> </div>
+		<button onclick="calculaForma()">Cálculo da Forma Geométrica</button><br>
+
+		<label id="resultado"></label>
+
+		<script src=scriptFormas.js></script>
+	</div>
+</body>
+<footer>
+	<p>Script criado por <Nome> na Aula de Front-End, prof Anthony, 2025</p>
+</footer>
+
+</html>

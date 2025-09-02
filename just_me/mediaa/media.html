@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULA FORMAS</title>
+    <link rel="stylesheet" href="mediastyle.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <button onclick="window.location.href='../index.html'">⬅ Voltar</button>
+	<header>
+		<div class="redes-sociais">
+			<a href="https://www.linkedin.com/in/ricardo-carmo-870719327/" target="_blank"><i class="fab fa-linkedin"></i></a>
+			<a href="https://www.instagram.com/ricardocarrmo/" target="_blank"><i class="fab fa-instagram"></i></a>
+			<a href="https://github.com/riickiy2" target="_blank"><i class="fab fa-github"></i></a>
+		</div>
+	</header>
+	<h1>Media e Situação do Aluno</h1>
+	<div class="caixa">
+		<label for="aluno">Selecione o aluno:</label><br>
+		<select id="aluno">
+			<option value="Adriano Lima">Adriano Lima</option>
+			<option value="Alcides Batista">Alcides Batista</option>
+			<option value="Alessandra Martins">Alessandra Martins</option>
+			<option value="Breno MArtins">Breno Martins</option>
+			<option value="Cauana Couto">Cauana Couto</option>
+			<option value="Eliton Oliveira">Eliton Oliveira</option>
+			<option value="Felipe Marques">Felipe Marques</option>
+			<option value="Gabriel Prado">Gabriel Prado</option>
+			<option value="Igor Guterres">Igor Guterres</option>
+			<option value="Jonatas Bispo">Jonatas Bispo</option>
+			<option value="Jorge Brito">Jorge Brito</option>
+			<option value="Larissa Manoela">Larissa Manoela</option>
+			<option value="Lucas Oliveira">Lucas Oliveira</option>
+			<option value="Marcos Nascimento">Marcos Nascimento</option>
+			<option value="Rafaela dos Santos">Rafaela dos Santos</option>
+			<option value="Ricardo do Carmo">Ricardo do Carmo</option>
+		</select><br> <br>
+		<label>Nota 1:</label>
+		<input type="number" id="n1" min="0" max="10">
+		<label>Nota 2:</label>
+		<input type="number" id="n2" min="0" max="10"><br>
+		<label>Nota 3:</label>
+		<input type="number" id="n3" min="0" max="10">
+		<label>Nota 4:</label>
+		<input type="number" id="n4" min="0" max="10"><br>
+		<button onclick="calcularMedia()">Cálculo da Média</button><br>
+
+		<hr>
+	
+		<div id="inputs"> </div>
+			<h2 id="resultado"></h2>			
+
+		<script src=script.js></script>
+	</div>
+</body>
+<footer>
+	<p>Script criado por Alcides Andrade no Curso de Programador Front-End no Senai Maracanã, prof Anthony Freitas, 2025</p>
+</footer>
+
+</html>
