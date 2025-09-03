@@ -3,7 +3,7 @@ body {
     /* background-color: #2a72d4;*/
     /*background: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)),url('imc.png'); Imagem de fundo transparente*/
     /*background:url('imagem.png') */
-    background: linear-gradient(to bottom right, darkgreen, lightgreen) ;
+    background: linear-gradient(to bottom right, rgb(26, 47, 143), rgb(17, 16, 16)) ;
     background-size: cover;
     height: 100vh;
     background-repeat: no-repeat;
@@ -16,7 +16,7 @@ body {
 
 /* Caixa centralizada */
 .caixa {
-    background-color: green;
+    background-color: rgb(49, 53, 61);
     width: 50%;
     margin: 50px auto;
     padding: 20px;
@@ -35,9 +35,17 @@ input, select, button {
 
 /* Botão */
 button {
-    background-color: #ffcc00;
+    background-color: #000000;
     cursor: pointer;
     font-weight: bold;
+    padding: 8px 22px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    color: aliceblue;
+}
+
+button:active{
+    transform: scale(0.96);
 }
 
 /* Rodapé */

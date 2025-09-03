@@ -45,11 +45,18 @@ input, select, button {
     border: none;
 }
 
-/* Botão */
 button {
-    background-color: #ffcc00;
+    background-color: #16155c;
     cursor: pointer;
     font-weight: bold;
+    padding: 8px 22px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    color: aliceblue;
+}
+
+button:active{
+    transform: scale(0.96);
 }
 
 /* Rodapé */

@@ -2,12 +2,12 @@
 body {
     /* background-color: #2a72d4;*/
     /*background: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)),url('imc.png'); Imagem de fundo transparente*/
-    /*background:url('imagem.png') */
-    background: linear-gradient(to bottom right, purple, yellow) ;
+    /*background:url('') */
+    background: linear-gradient(to bottom right, rgb(26, 47, 143), rgb(17, 16, 16)) ;
     background-size: cover;
     height: 150vh;
     background-repeat: no-repeat;
-    font-family: Arial, sans-serif;
+    font-family: Verdana, sans-serif;
     margin: 0;
     padding: 0;
     color: whitesmoke;
@@ -38,20 +38,23 @@ header {
 }
 
 .redes-sociais a:hover {
-    color: orange;
+    color: rgb(185, 77, 77);
     transform: scale(1.1);
 }
 
 /* Caixa centralizada */
 .caixa {
-    background-color: royalblue;
-    width: 50%;
-    margin: 50px auto;
-    padding: 20px;
+    background-color: rgb(110, 116, 136);
+    width: 30%;
+    margin: 20px auto;
+    padding: 50px;
     border-radius: 15px;
     box-shadow: 0 0 10px #000;
     color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
 }
+
 
 /* Inputs e botões */
 input, select, button {
@@ -63,10 +66,19 @@ input, select, button {
 
 /* Botão */
 button {
-    background-color: #ffcc00;
+    background-color: #16155c;
     cursor: pointer;
     font-weight: bold;
+    padding: 8px 22px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    color: aliceblue;
 }
+
+button:active{
+    transform: scale(0.96);
+}
+
 
 /* Rodapé */
 footer {

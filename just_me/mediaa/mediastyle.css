@@ -3,7 +3,7 @@ body {
     /* background-color: #2a72d4;*/
     /*background: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)),url('imc.png'); Imagem de fundo transparente*/
     /*background:url('imagem.png') */
-    background: linear-gradient(to bottom right, red, blue) ;
+    background: linear-gradient(to bottom right, rgb(26, 47, 143), rgb(17, 16, 16)) ;
     background-size: cover;
     height: 150vh;
     background-repeat: no-repeat;
@@ -51,6 +51,7 @@ header {
     border-radius: 15px;
     box-shadow: 0 0 10px #000;
     color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Inputs e botões */
@@ -63,9 +64,17 @@ input, select, button {
 
 /* Botão */
 button {
-    background-color: #ffcc00;
+    background-color: #16155c;
     cursor: pointer;
     font-weight: bold;
+    padding: 8px 22px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    color: aliceblue;
+}
+
+button:active{
+    transform: scale(0.96);
 }
 
 /* Rodapé */
