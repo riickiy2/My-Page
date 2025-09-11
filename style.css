@@ -1,149 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'montserrat', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(252, 252, 252));
-    color: rgb(51, 50, 50);
-    padding-top: 160px;
-    scroll-behavior: smooth;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+
 }
 
 header{
-    position: absolute;
+    margin-top: 20px;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: rgb(41, 41, 41);
-    color: white;
-    padding: 0px 10px; 
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    
-}
-
-.header-container{
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    z-index: 100;
+
 }
 
-.social-icons{
-    align-self: self-end;
+.logo{
+    font-size: 3rem;
+    color: #c82e58;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+
+nav a.active{
+    color: #c82e58;
+    border-bottom: 3px solid #c82e58;
+}
+
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #c82e58;
+        border-bottom: 3px solid #c82e58;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: rgb(22, 21, 21);
+        border-top: 0.1rem rgba(0,0,0,0.1);
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0 solid #c82e58;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #c82e58;
+    }
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.home .conteudo-home h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span{
+    color: #c82e58;
+}
+
+.conteudo-home h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.conteudo-home p{
+    font-size: 1.6rem;
+}
+.home-img{
+    border-radius: 50%;
+}
+
+.home-img img{
+    position: relative;
+    width: 25vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #c82e58;
+    cursor: pointer;
+    transition: 0.2 linear;
+}
+
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
 }
 
 .social-icons a{
-    color: #888484;
-    margin-right: 12px;
-    font-size: 22px;
-    transition: color 0.3s ease;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #c82e58;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #c82e58;
+
 }
 
 .social-icons a:hover{
-    color: rgb(88, 10, 10);
+    color: rgb(0, 0, 0);
+    transform: scale(1.3) translateY(-5px);
+    background-color: #c82e58;
+    box-shadow: 0 0 25px #c82e58;
 }
 
 
-.perfil{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;  
+.texto{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
 
+.texto span{
+    position: relative;
+}
+
+.texto span::before{
+    content: "estudante Full-Stack";
+    color: #c82e58;
+    animation: words 20s infinite;
+}
+
+.texto span::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid;
+    }
+}
+
+@media(max-width: 1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .conteudo-home h3{
+        font-size: 2.5rem;
+    }
+
+    .conteudo-home h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vh;
+        margin-top: 4rem;
+    }
+}
+
+.caixa_nova h1{
+   font-size: 50px;
+   color: #c82e58;
+}
+
+.caixa_nova h2{
+    font-size: 25px;
 }
 
 
-.perfil img{
-    width: 150px;
-    height: 150px;
-    border-radius: 5%;
-    object-fit: cover;
-    border: 2px solid rgb(255, 255, 255);
+/*---------Parte das imagens do portifólio---------*/
+
+/* Container do carrossel */
+.carousel-container {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Área que desliza */
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Cada card */
+.card {
+  position: relative;
+  min-width: 300px;
+  margin: 0 10px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 35%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  transition: height 0.4s ease, background 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.overlay h3 {
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+.overlay .resumo {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.overlay .detalhes {
+  font-size: 13px;
+  opacity: 0;
+  margin-top: 10px;
+  transition: opacity 0.3s ease;
+}
+
+/* Efeito hover */
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card:hover .overlay {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.card:hover .overlay .detalhes {
+  opacity: 1;
+}
+
+/* Botões de navegação */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.9);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .card {
+    min-width: 250px;
+  }
+}
+
+.curriculo-text h1{
+    color: #c82e58;
+    font-size: 50px;
+}
+.curriculo {
+  display: flex;
+  gap: 100px;           /* Espaço entre as colunas */
+  max-width: 900px;    /* Largura máxima do currículo */
+  margin: 0 auto;      /* Centraliza na página */
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.coluna-esquerda {
+  flex: 1;             /* Ocupa metade */
+}
+
+.coluna-esquerda h2{
+    font-size: 30px;
+}
+
+.coluna-esquerda p{
+    font-size: 15px;
 }
 
 
-.perfil h1{
-    font-size: 1.8rem;
-    font-weight: bold;
+.coluna-direita {
+  flex: 1;             /* Ocupa metade */
+}
+
+.coluna-direita h2{
+    font-size: 30px;
+}
+
+.coluna-direita p{
+    font-size: 15px;
+}
+
+.coluna-direita li{
+    font-size: 15px;
 }
 
 
-nav ul{
-    list-style: none;
-    display: flex;
-    gap: 40px;
-    
-}
-
-
-nav ul li a{
-    color: #888484;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-    
-}
-
-
-nav ul li a:hover{
-    color: brown;
-}
-
-
-section {
-    padding: 60px 90px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-h2 {
-    margin-bottom: 20px;
-    font-size: 2rem;
-    color: rgb(65, 65, 65);
-}
-
-
-.intro{
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-}
-
-
-.caixa{
-    flex: 20;
-    background: gray;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
-}
-
-.caixa p{
-    padding-left: 10px;
-    text-align: justify;
-    color: aliceblue;
-}
-
-.caixa h2{
-    margin-top: 0;
-    color: rgb(90, 88, 88);
-}
-
-
-/* FOOTER */
-footer {
-    background: #222;
-    color: white;
+footer{
     text-align: center;
     padding: 20px;
     margin-top: 40px;
+    font-size: 12px;
+}
+
+footer a{
+    color: #c82e58;
 }
