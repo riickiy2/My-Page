@@ -1,79 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rickiy-Portifólio</title>
-    <link rel="stylesheet" href="style.css">
-    <!--link para chamar as imagens dos icones-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Riickiy</title>
 </head>
 <body>
-    <!--Header, menu do site-->
     <header>
-        <div class = "header-container">
+        <a href="#" class="logo">Ricardo</a>
+        <nav>
+            <a href="#" class="active ">Home</a>
+            <a href="#portifolio">Portifólio</a>
+            <a href="#curriculo">Curriculo</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-img">
+            <img src="imagem/medium.jpg" alt="img">
+        </div>
+        <div class="conteudo-home">
+            <h1>Opa, aqui é o <span>Ricardo</span></h1>
+            <h3 class="texto">Eu sou <span></span></h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime enim neque doloremque fuga, aliquid voluptatum possimus dignissimos, vel nihil iusto officia! Rem ducimus architecto quam aspernatur dicta nemo vel maxime?</p>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/ricardo-carmo-870719327/" target="_blank"><i class="fab fa-linkedin"></i></a>
 				<a href="https://www.instagram.com/ricardocarrmo/" target="_blank"><i class="fab fa-instagram"></i></a>
 				<a href="https://github.com/riickiy2" target="_blank"><i class="fab fa-github"></i></a>
-			</div>
-            <div class = "perfil">
-                <img src="just_me/imagem/eu_perfil.jpg" alt="foto de perfil">
-                <h1>Riickiy</h1>
-                
             </div>
-            <nav>
-                <ul> <!--Links internos-->
-                    <li><a href="just_me/celcius/celcius.html">Celsius / Farenhiet</a></li>
-                    <li><a href="just_me/CalculoGeometrico/math.html">Área e Perimetro</a></li>
-                    <li><a href="just_me/imc/imc.html">Calculo IMC</a></li>
-                    <li><a href="just_me/mediaa/media.html">Média</a></li>
-                    <li><a href="just_me/tinta/tinta.html">Cálculo de tintas</a></li>
-        
-                </ul>
-            </nav>
-        </div>
-    </header>
+            
+        </div>        
+    </section>
+    <section id="portifolio">
+        <div class="caixa_nova">
+            <h1>Protifólio:</h1><br>
+            <h2>Aqui estão alguns dos projetos que venho trabalhando, sempre que atualizados no GitHub estarei atualizando por aqui.</h2><br>
 
-    <main>
-        <section class = "intro">
-            <div class = "caixa">
-                <h2>Quem sou eu?</h2>
-                <p>Meu nome é Ricardo do Carmo. Sou um estudante Full-Stack pelo senai Maracanã!</p>
+            <div class="carousel-container">
+                <button class="prev">&#10094;</button>
+            
+                <div class="carousel">
+                    <!--CALCULO DAS TEMPERATURAS-->
+                    <a href="https://riickiy2.github.io/celcius-fahrenheit/" target="_blank" class="card">
+                        <img src="imagem/fahrenheit_celsius.jpg" alt="temperatura">
+                        <div class="overlay">
+                            <h3>Celsius/Fahrenheit</h3>
+                            <p class="resumo">Conversão de Temperatura</p>
+                            <p class="detalhes">Conversor feito com HTML, CSS e JS</p>
+                        </div>
+                    </a>
+
+                    <!--CALCULO GEOMETRICO-->
+                    <a href="https://riickiy2.github.io/Calculo_Geometrico/" target="_blank" class="card">
+                        <img src="imagem/geometrico.webp" alt="Projeto 2">
+                        <div class="overlay">
+                            <h3>Calculo Geométrico</h3>
+                            <p class="resumo">Calculo da área e perimetro de formas geométricas</p>
+                            <p class="detalhes">Calculadora de área e perimetro feito em HTML, CSS e JS</p>
+                        </div>
+                    </a>
+
+                    <!--CALCULO IMC-->
+                    <a href="https://riickiy2.github.io/imc/" target="_blank" class="card">
+                        <img src="imagem/imc.webp" alt="Projeto 3">
+                        <div class="overlay">
+                            <h3>IMC</h3>
+                            <p class="resumo">Calculo de IMC</p>
+                            <p class="detalhes">Calculadora de IMC feito em HTML, CSS e JS</p>
+                        </div>
+                    </a>
+
+                    <!--MEDIA DE ALUNO-->
+                    <a href="https://riickiy2.github.io/media-student/" target="_blank" class="card">
+                        <img src="imagem/media.webp" alt="Projeto 4">
+                        <div class="overlay">
+                            <h3>Média de Aluno</h3>
+                            <p class="resumo">Calculadora de média de aluno</p>
+                            <p class="detalhes">Uma calculadora que apresenta a média de 4 notas de um aluno e retorna se ele foi aprovado ou não</p>
+                        </div>
+                    </a>
+
+                    <!---->
+                    <a href="https://riickiy2.github.io/calculo-tinta/" target="_blank" class="card">
+                        <img src="imagem/tinta.jpg" alt="Projeto 4">
+                        <div class="overlay">
+                            <h3>Calculo de Tinta</h3>
+                            <p class="resumo">Calculadora de litros de tintas</p>
+                            <p class="detalhes">Calculadora que fornece a quantida aproximada de quantos litros de tintas serão necessários para pintar uma ou mais paredes com base em sua altura e largura</p>
+                        </div>
+                    </a>
+
+                </div>
+  
+                <button class="next">&#10095;</button>
+            </div>
                 
-            </div> 
-            <div class = "caixa">
-                <h2>Oque é esse site?</h2>
-                <p>É a junção de todos os trabalhos passados pelo professor Anthony da instituição Senai Maracanã. </p>
-            </div>                  
-        </section>
-       
-        <section id = "sobre">
-            <h2>Quais as funções do site:</h2>
-            <ul>
-                <h3>Celsius/Farenheit</h3>
-                <p>Converte somente o valor de Celcius para Farenheit, futuramente seram feitas atualizações com mais funcionalidades!</p><br>
+        </div>
+    </section>
 
-                <h3>Calculo IMC</h3>
-                <p>Faz uma calculo de seu Indice Médio Corporal de forma rapida e correta!</p><br>
+    <!--CURRICULO-->
+    <section id="curriculo">
+        <div class="curriculo-text">
+            <h1>Curriculo:</h1><br>
+        </div>
+        <div class="curriculo">            
+            <!-- Coluna Esquerda -->
+            <div class="coluna-esquerda">
+                <h2>Informações Pessoais</h2>
+                <p><strong>Nome:</strong> Ricardo do Carmo da Silva</p>
+                <p><strong>Email:</strong> ricardocarmofr@email.com</p>
+                <p><strong>GitHub:</strong> github.com/riickiy2</p>
 
-                <h3>área e Perimetro</h3>
-                <p>Faz calculos de Area e perimetro rapidamente</p><br>
+                <h2>Sobre Mim</h2>
+                <p>Eu gosto de escutar musica e jogar alguns jogos online enquanto converso com meus amigos. <br> Gosto também de compartilhar meu spotify para as pessoas darem um olhada e julgarem meus gostos musicas, então, fique a vontade em ver meu <strong><a style="color: #c82e58;" href="https://open.spotify.com/user/qfs5pwqbbpmcki0lo0hrjy91b?si=faf81e3969404c82" target="_blank">Spotify</a></strong></p>
 
-                <h3>Média</h3>
-                <p>Esse é meio obvia...né?</p><br>
+                <h2>Resumo Profissional</h2>
+                <p>
+                Desenvolvedor em formação, com experiência basica em Python, HTML, CSS, JS e SQL.
+                Busco oportunidade para aplicar meus conhecimentos em projetos reais.
+                </p>
+            </div>
 
-                <h3>Cálculo de tintas</h3>
-                <p>Vou te falar que nem eu entendi direito oque é pra ser isso, mas vou fingir que sei pra que serve</p>
-            </ul>
+            <!-- Coluna Direita -->
+            <div class="coluna-direita">
+                <h2>Habilidades Técnicas</h2>
+                <ul>
+                    <li>Python, JavaScript</li>
+                    <li>Django</li>
+                    <li>Git/GitHub</li>
+                </ul>
+
+                <h2>Formação</h2>
+                <p>Ensino médio completo - Colegio JEUC Nova Geração</p>
+
+                <h2>Cursos e Certificações</h2>
+                <ul>
+                    <li>Python 3 – Mundo 1 [40 Horas] - Curso em Vídeo</li>
+                    <li>Python 3 – Mundo 2 [40 Horas] - Curso em Vídeo</li>
+                    <li>Inteligência Artificial para a Indústria - SenaiPlay</li>
+                    <li>Informática Básica na Prática - SenaiPlay</li>
+                    <li>Formulando Prompts com IA - SenaiPlay</li>
+                    <li>Fundamentos de Inteligência Artificial - SenaiPlay</li>
+                    <li>Gamificação na Prática - SenaiPlay</li>
+                    
+                    
+                </ul>
+            </div>
             
             
-            
-        </section>
-       
-    </main>
 
-    <footer>
-        <p>© 2025 Ricardo Carmo - Todos os direitos reservados</p>
+        </div>
+    </section>
+    <script src="scrip.js"></script>   
+    <footer> 
+        <p>Para mais Informações, entre em contado <strong><span style="color: #c82e58;">ricardocarmofr@gmail.com</span></strong> ou por <strong><a href="https://www.instagram.com/ricardocarrmo/" target="_blank">Instagram</a></strong></p><br>
+        <p>Todos os direitos reservados a <strong><span style="color: #c82e58;">Ricardo do Carmo</span></strong></p>
     </footer>
+                 
 </body>
+</html>
