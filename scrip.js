@@ -21,8 +21,3 @@ prev.addEventListener('click', () => {
   updateCarousel();
 });
 
-// Auto-play a cada 3 segundos
-setInterval(() => {
-  index = (index + 1) % total;
-  updateCarousel();
-}, 3000);
